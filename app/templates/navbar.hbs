@@ -7,13 +7,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      {{#link-to 'index' class="navbar-brand"}}Home{{/link-to}}
+      {{#link-to 'index' class="navbar-brand"}}Phishbowl{{/link-to}}
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
         {{#link-to 'shows' tagName="li"}}<a href="">Upcoming Shows</a>{{/link-to}}
       </ul>
+
+     <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    {{#link-to 'admin.shows' tagName="li"}}<a href="">Manage Shows</a>{{/link-to}}
+                    {{#link-to 'admin.add-show' tagName="li"}}<a href="">Add Show</a>{{/link-to}}
+                </ul>
+            </li>
+        </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
